@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.slide {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+.slide p {
+    font-size: 1.7vh;
+}
+
+.slide h2 {
+    font-size: 16vh;
+}
+
+.oswald {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8vw;
+}
+
+#typewriter {
+    font-size: 6.5vw;
+    text-align: center;
+}
+
+.about-us {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 3vw 2vh 0;
+    cursor: pointer;
+}
+
+.contact-icon {
+    width: 13vh;
+    height: 13vh;
+}
