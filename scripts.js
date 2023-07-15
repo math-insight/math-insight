@@ -36,3 +36,26 @@ window.onload = function() {
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text);
 }
+
+window.addEventListener('resize', checkTextWidth);
+
+function checkTextWidth() {
+    const slideWidth = document.querySelector('.slide:nth-child(3)').offsetWidth;
+    const contactItems = document.querySelectorAll('.contact-item p');
+    let tooWide = false;
+
+    contactItems.forEach(item => {
+        if (item.scrollWidth > slideWidth) {
+            tooWide = true;
+        }
+    });
+
+    if (tooWide) {
+        contactItems.forEach(item => {
+            item.style.fontSize = '60%';
+        });
+    }
+}
+
+checkTextWidth();
+
