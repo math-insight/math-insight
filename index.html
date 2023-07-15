@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/stylesheet.css">
-    <script src="scripts/animation.js"></script>
-    <script src="scripts/copyToClipboard.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"  href="stylesheet.css">
 
-</head>
+    </head>
     <body>
         <div class="slide">
-            <h1 id="typewriter" class="oswald"></h1>
+            <h1 id="title"></h1>
         </div>
-        <div class="slide">
-            <h2 class="oswald">O nas.</h2>
-            <div class="about-us">
-                <p class="roboto-mono">
-                    Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się na różnych kierunkach na Wydziale
+        <div class="slide" id="slide2">
+            <div id="contentWrapper">
+                <h1>O nas.</h1>
+                <p id="content">Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się na różnych kierunkach na Wydziale
                     Matematyki, Informatyki i Ekonometrii. W 2023 roku braliśmy udział w Szkole Modelowania Matematycznego.
                     To doświadczenie spowodowało, że postanowiliśmy rozwijać się w obszarach matematyki, statystyki, analizy
                     danych i programowania, a co za tym idzie - rozszerzać naszą wiedzę teoretyczną i praktyczną w tych
-                    dziedzinach. Wspólnie wznowiliśmy działalność Koła Naukowego Zastosowań Matematyki, którego opiekunami
+                    dziedzinach. Wspólnie wznowiliśmy działalność Koła Naukowego Matematyki Stosowanej, którego opiekunami
                     są profesor Jacek Bojarski oraz doktor Maciej Niedziela. W ramach koła chcemy dzielić się zdobytym przez
                     nas doświadczeniem, wspólnie analizować problemy z zakresu matematyki oraz tworzyć innowacyjne rozwiązania,
                     które mogłyby usprawnić działanie wielu firm i projektów. Pragniemy inspirować innych do odkrywania piękna
                     i wszechstronności matematyki oraz pokazywać, jak wartościowa jest analiza danych w dzisiejszym świecie.
                     Przez naszą pracę chcemy przyczynić się do dalszego rozwoju naukowego oraz spowodować, aby matematyka
-                    częściej była wdrażana w działania praktyczne.
-                </p>
+                    częściej była wdrażana w działania praktyczne.</p>
             </div>
+            <img id="arrow" src="./images/arrow_down_big.png" onclick="expandSlide()">
         </div>
-        <div class="slide">
-            <h2 class="oswald">Kontakt.</h2>
+        <div class="slide" >
+            <h1>Kontakt.</h1>
             <div class="contact">
                 <a class="contact-item" onclick="copyToClipboard('knmatematykistosowanej@gmail.com')">
                     <img src="images/email_icon.png" alt="Email Icon" class="contact-icon">
@@ -49,5 +48,8 @@
                 </a>
             </div>
         </div>
+
+        <script src="scripts.js"></script>
     </body>
-</html>
+    </html>
+
