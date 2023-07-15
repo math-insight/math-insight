@@ -22,8 +22,8 @@ p {
     display: flex;
     width: 100%;
     height: 85vh;
-    padding: 0 10%;  /* Dodaje padding po obu stronach slajdu */
-    box-sizing: border-box;  /* Ustala, że padding jest wliczany do szerokości .slide */
+    padding: 0 10%;
+    box-sizing: border-box;
     margin-bottom: 10vh;
     align-items: center;
     justify-content: center;
@@ -75,7 +75,7 @@ p {
 }
 
 .contact-icon {
-    width: 5vw;  /* width and height can be adjusted according to your needs */
+    width: 5vw;
     height: auto;
 }
 

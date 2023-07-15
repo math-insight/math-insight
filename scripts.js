@@ -1,15 +1,14 @@
-var titleText = "Koło naukowe matematyki stosowanej\nInsight.";
+var titleText = "Koło naukowe matematyki stosowanej Insight.";
 var title = document.getElementById('title');
 var index = 0;
 
-function scripts() {
+function typeWriter() {
     if (index < titleText.length) {
         title.innerHTML += titleText.charAt(index);
         index++;
-        setTimeout(scripts, 100);
+        setTimeout(typeWriter, 100);
     }
 }
-window.onload = scripts;
 
 function expandSlide() {
     var slide2 = document.getElementById('slide2');
@@ -22,7 +21,7 @@ function expandSlide() {
     slide2.style.height = `${contentWrapper.scrollHeight}px`;
 }
 
-scripts();
+typeWriter();
 
 window.onload = function() {
     var contentWrapper = document.getElementById('contentWrapper');
