@@ -47,6 +47,7 @@ p.content-text {
 
 .wrap {
     height: 50vh;
+    padding: 10vh 0;
     justify-content: center;
     align-items: center;
     align-content: flex-start;
@@ -94,6 +95,7 @@ img {
 @media only screen and (orientation: portrait) {
     .wrap {
         display: flex;
+        height: auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -101,6 +103,7 @@ img {
 
     h1 {
         font-size: 3rem;
+        text-align: center;
     }
 
     p {
@@ -112,6 +115,8 @@ img {
     }
 
     .contact-list {
+        display: flex;
+        flex-direction: column;
         list-style-type: none;
         margin: 0;
         padding: 0;
