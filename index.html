@@ -2,53 +2,43 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Koło naukowe matematyki stosowanej Insight.</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <title>Insight.</title>
-
 </head>
 <body>
-<div class="slide">
-    <h1 id="title"></h1>
-</div>
-<div class="slide" id="slide2">
-    <div id="contentWrapper">
-        <h1>O nas</h1>
-        <p id="content">Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się na różnych kierunkach na Wydziale
-            Matematyki, Informatyki i Ekonometrii. W 2023 roku braliśmy udział w Szkole Modelowania Matematycznego.
-            To doświadczenie spowodowało, że postanowiliśmy rozwijać się w obszarach matematyki, statystyki, analizy
-            danych i programowania, a co za tym idzie - rozszerzać naszą wiedzę teoretyczną i praktyczną w tych
-            dziedzinach. Wspólnie wznowiliśmy działalność Koła Naukowego Matematyki Stosowanej, którego opiekunami
-            są profesor Jacek Bojarski oraz doktor Maciej Niedziela. W ramach koła chcemy dzielić się zdobytym przez
-            nas doświadczeniem, wspólnie analizować problemy z zakresu matematyki oraz tworzyć innowacyjne rozwiązania,
-            które mogłyby usprawnić działanie wielu firm i projektów. Pragniemy inspirować innych do odkrywania piękna
-            i wszechstronności matematyki oraz pokazywać, jak wartościowa jest analiza danych w dzisiejszym świecie.
-            Przez naszą pracę chcemy przyczynić się do dalszego rozwoju naukowego oraz spowodować, aby matematyka
-            częściej była wdrażana w działania praktyczne.</p>
+    <div class="slide">
+        <h1 id="title"></h1>
     </div>
-    <img id="arrow" src="./images/arrow_down_big.png" alt="Rozwiń tekst" onclick="expandSlide()">
-</div>
-<div class="slide" id="contactSlide">
-    <h1>Kontakt</h1>
-    <div class="contact">
-        <div class="contact-item" onclick="copyToClipboard('knmatematykistosowanej@gmail.com')">
-            <img src="images/email_icon.png" alt="Ikona Email" class="contact-icon">
-            <p id="email">knmatematykistosowanej@gmail.com</p>
+    <div class="slide">
+        <div class="about-us">
+            <h1>O nas.</h1>
+            <p class="content-text">Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się na różnych kierunkach na Wydziale Matematyki, Informatyki i Ekonometrii. W 2023 roku braliśmy udział w Szkole Modelowania Matematycznego. To doświadczenie spowodowało, że postanowiliśmy rozwijać się w obszarach matematyki, statystyki, analizy danych i programowania, a co za tym idzie - rozszerzać naszą wiedzę teoretyczną i praktyczną w tych dziedzinach. Wspólnie wznowiliśmy działalność Koła Naukowego Matematyki Stosowanej, którego opiekunami są profesor Jacek Bojarski oraz doktor Maciej Niedziela. W ramach koła chcemy dzielić się zdobytym przez nas doświadczeniem, wspólnie analizować problemy z zakresu matematyki oraz tworzyć innowacyjne rozwiązania, które mogłyby usprawnić działanie wielu firm i projektów. Pragniemy inspirować innych do odkrywania piękna i wszechstronności matematyki oraz pokazywać, jak wartościowa jest analiza danych w dzisiejszym świecie. Przez naszą pracę chcemy przyczynić się do dalszego rozwoju naukowego oraz spowodować, aby matematyka częściej była wdrażana w działania praktyczne.</p>
         </div>
-        <a class="contact-item" href="https://github.com/Insight-Applied-Math-UZ" target="_blank" rel="noopener noreferrer">
-            <img src="images/github_icon.png" alt="Ikona Github" class="contact-icon">
-            <p>Insight-Applied-Math-UZ</p>
-        </a>
-        <a class="contact-item" href="https://www.google.com/maps/place/A-29+Campus+A/@51.9417947,15.5279852,18z/data=!4m10!1m2!2m1!1sul.+prof.+Z.+Szafrana+4a,65-516+Zielona+G%C3%B3ra!3m6!1s0x4706131914ce0075:0x55179ebc1c6e9daa!8m2!3d51.9423378!4d15.5301146!15sCi11bC4gcHJvZi4gWi4gU3phZnJhbmEgNGEsNjUtNTE2IFppZWxvbmEgR8OzcmGSAQp1bml2ZXJzaXR54AEA!16s%2Fg%2F11kc281b1p?entry=ttu" target="_blank" rel="noopener noreferrer">
-            <img src="images/location_icon.png" alt="Ikona Lokalizacji" class="contact-icon">
-            <p>ul. prof. Z. Szafrana 4a<br>65-516 Zielona Góra<br>Kampus A Budynek A-29<br>Pokój 424</p>
-        </a>
     </div>
-</div>
-<script src="scripts.js"></script>
+    <div class="wrap">
+        <h1>Kontakt.</h1>
+        <ul class="contact-list">
+            <li>
+                <img src="./images/email_icon.png" alt="Adres email">
+                <p>knmatematykistosowanej@gmail.com</p>
+            </li>
+            <li>
+                <img src="./images/github_icon.png" alt="Nazwa organizacji na Github">
+                <a href="https://github.com/Insight-Applied-Math-UZ"><p>Insight-Applied-Math</p></a>
+            </li>
+            <li>
+                <img src="./images/location_icon.png" alt="Adres email">
+                <a href="https://www.google.com/maps/place/A-29+Campus+A/@51.9417947,15.5279852,18z/data=!4m10!1m2!2m1!1sul.+prof.+Z.+Szafrana+4a,65-516+Zielona+G%C3%B3ra!3m6!1s0x4706131914ce0075:0x55179ebc1c6e9daa!8m2!3d51.9423378!4d15.5301146!15sCi11bC4gcHJvZi4gWi4gU3phZnJhbmEgNGEsNjUtNTE2IFppZWxvbmEgR8OzcmGSAQp1bml2ZXJzaXR54AEA!16s%2Fg%2F11kc281b1p?entry=ttu" target="_blank" rel="noopener noreferrer">
+                    <p>ul. prof. Z. Szafrana 4a,65-516 Zielona Góra</p>
+                </a>
+            </li>
+          </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
