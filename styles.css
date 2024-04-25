@@ -20,9 +20,15 @@ body {
 
 h1 {
     font-family: "Oswald", sans-serif;
-    font-size: 3.9rem;
+    font-size: 3.8rem;
     letter-spacing: 0.8px;
     margin: 0;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.3rem;
+    letter-spacing: 0.8px;
 }
 
 p {
@@ -36,13 +42,22 @@ a {
     color: black;
 }
 
-p.content-text {
+p.content-text, .project-description {
     text-align: justify;
     overflow: hidden;
 }
 
-.about-us {
+.about-us, .projects {
     padding: 10vh 0;
+}
+
+.projects {
+    width: 100%;
+}
+
+.statute {
+    width: 100%;
+    margin-bottom: 5vh;
 }
 
 .wrap {
@@ -106,11 +121,16 @@ img {
         text-align: center;
     }
 
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
     p {
         font-size: 0.95rem;
     }
 
-    p.content-text {
+    p.content-text, .project-description {
         text-align: center;
     }
 

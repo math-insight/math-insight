@@ -1,6 +1,8 @@
 const textElement = document.getElementById('title');
-const text = "Koło naukowe matematyki stosowanej Insight.";
+const text = "Koło Naukowe Matematyki Stosowanej Insight.";
         let index = 0;
+
+const allProjects = document.getElementById("all-projects")
 
 function typeText() {
     if (index < text.length) {
@@ -12,7 +14,19 @@ function typeText() {
     }
 }
 
+function getProjects() {
+    for (const element of projects) {
+        allProjects.innerHTML += `
+            <div>
+                <h2 class="project-title">${element.title}</h2>
+                <p class="project-description">${element.description}</p>
+            </div>
+            `;
+    }
+}
+
 window.onload = function() {
     textElement.style.display="block"
     typeText();
+    getProjects();
 }
