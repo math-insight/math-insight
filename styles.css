@@ -37,14 +37,39 @@ p {
     line-height: 1.5;
 }
 
+p.content-text, .project-description {
+    text-align: justify;
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
-p.content-text, .project-description {
-    text-align: justify;
-    overflow: hidden;
+a:hover {
+    color: palevioletred;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    background-color: #FAF9F6;
+    border: 2px solid black;
+    color: black;
+    padding: 12px 24px;
+    text-align: center;
+    font-family: "Roboto mono", monospace;
+    font-size: 0.9rem;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #DAD9D6;
 }
 
 .about-us, .projects {
@@ -53,6 +78,15 @@ p.content-text, .project-description {
 
 .projects {
     width: 100%;
+}
+
+.project-description {
+    background-color: #EAE9E6;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .statute {
@@ -132,6 +166,10 @@ img {
 
     p.content-text, .project-description {
         text-align: center;
+    }
+
+    .button-container {
+        justify-content: center;
     }
 
     .contact-list {

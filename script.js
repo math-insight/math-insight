@@ -17,16 +17,19 @@ function typeText() {
 function getProjects() {
     for (const element of projects) {
         allProjects.innerHTML += `
-            <div>
+            <div class="project">
                 <h2 class="project-title">${element.title}</h2>
                 <p class="project-description">${element.description}</p>
+                <div class="button-container">
+                    <button class="button" onclick="location.href='more-about-projects/${element.directory}.html'">Zobacz więcej.</button>
+                </div>
             </div>
             `;
     }
 }
 
-window.onload = function() {
-    textElement.style.display="block"
+window.onload = function () {
+    textElement.style.display = "block"
     typeText();
     getProjects();
 }
