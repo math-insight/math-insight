@@ -21,7 +21,7 @@ function getProjects() {
                 <h2 class="project-title">${element.title}</h2>
                 <p class="project-description">${element.description}</p>
                 <div class="button-container">
-                    <button class="button" onclick="location.href='more-about-projects/${element.directory}.html'">Zobacz więcej.</button>
+                    <button onclick=location.href='more-about-projects/${element.directory}.html'>Zobacz więcej.</button>
                 </div>
             </div>
             `;
