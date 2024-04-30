@@ -3,6 +3,27 @@ body {
     padding: 0 3vw;
 }
 
+.statute-wrapper {
+    margin-bottom: 20vh;
+}
+
+.floating-link {
+    position: fixed; /* Fixed positioning */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background-color: #007BFF; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for size */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    z-index: 1000; /* High z-index to stay on top */
+}
+
+.floating-link:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+
 .slide {
     display: flex;
     justify-content: center;
@@ -31,7 +52,7 @@ h2 {
     letter-spacing: 0.8px;
 }
 
-p {
+p, li {
     font-family: "Roboto mono", monospace;
     font-size: 1.3rem;
     line-height: 1.5;
@@ -53,11 +74,11 @@ a:hover {
 
 .button-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.button {
+button {
     background-color: #FAF9F6;
     border: 2px solid black;
     color: black;
@@ -70,6 +91,7 @@ a:hover {
 
 button:hover {
     background-color: #DAD9D6;
+    cursor: pointer;
 }
 
 .about-us, .projects {
