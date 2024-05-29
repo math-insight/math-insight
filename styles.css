@@ -165,11 +165,11 @@ img {
         text-align: center;
     }
 
-    p {
+    p, li {
         font-size: 0.95rem;
     }
 
-    p.content-text, .project-description {
+    p.content-text, .project-description, a {
         text-align: center;
     }
 
