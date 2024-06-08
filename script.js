@@ -1,6 +1,6 @@
 const textElement = document.getElementById('title');
 const text = "Koło Naukowe Matematyki Stosowanej Insight.";
-        let index = 0;
+let index = 0;
 
 const allProjects = document.getElementById("all-projects")
 
@@ -20,13 +20,15 @@ function getProjects() {
             <div class="project">
                 <h2 class="project-title">${element.title}</h2>
                 <p class="project-description">${element.description}</p>
-                <div class="button-container">
-                    <button onclick=location.href='more-about-projects/${element.directory}.html'>Zobacz więcej.</button>
-                </div>
             </div>
             `;
     }
 }
+
+// przyciski na razie nie potrzebne
+// <div className="button-container">
+//     <button onClick=location.href='more-about-projects/${element.path}.html'>Zobacz więcej.</button>
+// </div>
 
 window.onload = function () {
     textElement.style.display = "block"
