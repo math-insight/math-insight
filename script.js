@@ -2,7 +2,7 @@ const textElement = document.getElementById('title');
 const text = "Koło Naukowe Matematyki Stosowanej Insight.";
 let index = 0;
 
-const allProjects = document.getElementById("all-projects")
+const allProjects = document.getElementById("all-projects");
 
 function typeText() {
     if (index < text.length) {
@@ -25,10 +25,9 @@ function getProjects() {
     }
 }
 
-// przyciski na razie nie potrzebne
-// <div className="button-container">
-//     <button onClick=location.href='more-about-projects/${element.path}.html'>Zobacz więcej.</button>
-// </div>
+{/* <div class="button-container">
+    <button type="button" onClick=location.href='more-about-projects/${element.path}.html'>Zobacz więcej.</button>
+</div> */}
 
 window.onload = function () {
     textElement.style.display = "block"
