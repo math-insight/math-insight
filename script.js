@@ -25,9 +25,9 @@ function getProjects() {
     }
 }
 
-{/* <div class="button-container">
-    <button type="button" onClick=location.href='more-about-projects/${element.path}.html'>Zobacz więcej.</button>
-</div> */}
+// <div class="button-container">
+    // <button class="see-more-button hover-line" type="button" onClick=location.href='more-about-projects/${element.path}.html'>Zobacz więcej.</button>
+// </div>
 
 window.onload = function () {
     textElement.style.display = "block"
