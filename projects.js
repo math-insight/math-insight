@@ -7,6 +7,6 @@ const projects = [
     {
         title: 'Aplikacja webowa ZairyMON.',
         description: 'Aplikacja webowa służąca do monitorowania jakości powietrza i dynamicznego przedstawiania wyników pomiarów oraz symulacji matematycznych. </br><a href="https://app.zairymon.pl/">app.zairymon.pl</a>',
-        directory: 'project2'
+        path: 'project2'
     },
 ];

@@ -49,32 +49,11 @@ p.content-text, .project-description {
 a {
     text-decoration: none;
     color: black;
+    transition-duration: 0.2s;
 }
 
 a:hover {
     color: palevioletred;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-button {
-    background-color: #FAF9F6;
-    border: 2px solid black;
-    color: black;
-    padding: 12px 24px;
-    text-align: center;
-    font-family: "Roboto mono", monospace;
-    font-size: 0.9rem;
-    transition-duration: 0.4s;
-}
-
-button:hover {
-    background-color: #DAD9D6;
-    cursor: pointer;
 }
 
 .about-us, .projects {
@@ -87,11 +66,48 @@ button:hover {
 
 .project-description {
     background-color: #EAE9E6;
-    border: 2px solid black;
     display: inline-block;
     padding: 10px 20px;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    border: 2px solid black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.see-more-button {
+    border: none;
+    background-color: transparent;
+    font-family: "Roboto mono", monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+.hover-line {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-line::after {
+    content: ''; 
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+    bottom: -5.5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.hover-line:hover::after {
+    transform: scaleX(1);
 }
 
 .statute {
@@ -175,6 +191,10 @@ img {
 
     .button-container {
         justify-content: center;
+    }
+
+    .see-more-button {
+        font-size: 0.9rem;
     }
 
     .contact-list {
