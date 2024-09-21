@@ -155,6 +155,32 @@ img {
   width: 9vh;
 }
 
+.main-page-link {
+  max-width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 15px 0;
+}
+
+.main-page-link p {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 1px;
+}
+
+/* podstrony z projektami */
+header.project-header {
+  border-bottom: 2px solid black;
+  padding: 60px 0 35px;
+}
+
+section.project-content {
+  border-bottom: 2px solid black;
+  padding: 20px 0 60px;
+}
+
 @media (orientation: landscape) {
   body {
     max-width: 70vw;
