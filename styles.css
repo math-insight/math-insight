@@ -88,7 +88,7 @@ a:hover {
   font-family: "Roboto mono", monospace;
   font-size: 1rem;
   cursor: pointer;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .hover-line {
@@ -170,8 +170,8 @@ img {
   padding-top: 1px;
 }
 
-/* podstrony z projektami */
-header.project-header {
+header.project-header,
+header.statute-header {
   border-bottom: 2px solid black;
   padding: 60px 0 35px;
 }
@@ -179,6 +179,10 @@ header.project-header {
 section.project-content {
   border-bottom: 2px solid black;
   padding: 20px 0 60px;
+}
+
+section.statute-content {
+  padding-top: 20px;
 }
 
 @media (orientation: landscape) {
@@ -215,7 +219,8 @@ section.project-content {
 
   p.content-text,
   .project-description,
-  a {
+  a,
+  section.project-content {
     text-align: center;
   }
 
@@ -223,7 +228,8 @@ section.project-content {
     justify-content: center;
   }
 
-  .see-more-button {
+  .see-more-button,
+  .main-page-link p {
     font-size: 0.9rem;
   }
 
@@ -243,5 +249,10 @@ section.project-content {
     justify-content: center;
     width: 100%;
     height: auto;
+  }
+
+  .main-page-link {
+    margin: auto;
+    padding-top: 20px;
   }
 }
