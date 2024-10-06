@@ -104,14 +104,15 @@
             width: 100vw;
             height: 100vh;
             background: rgba(0, 0, 0, 0.8);
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
         }
 
         .scrollable-text {
-            width: 60%;
+            max-width: 60%; /* Use max-width to ensure it doesn't overflow */
+            width: 100%; /* Ensure it scales properly */
             max-height: 80%;
             background: rgba(255, 255, 255, 0.9);
             color: black;
@@ -119,8 +120,8 @@
             overflow-y: auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            animation: fadeIn 0.5s;
         }
+
 
         .popup {
             animation: fadeIn 0.8s ease-in-out;
@@ -248,14 +249,14 @@
 
                 <h2>Strona internetowa z panelem administratora dla Ośrodka Zastosowań Matematyki i Informatyki</h2>
                 <p>Nasza aplikacja to inicjatywa studentów Koła Naukowego, mająca na celu rozwój umiejętności programistycznych w realnych projektach. Aplikacja powstaje z myślą o pracownikach Ośrodka, a jej rozwój to dla nas cenne doświadczenie.</p>
-                <p>To nie tylko nauka programowania, ale też praca z jasno określonym celem – stworzeniem aplikacji użytecznej dla pracowników. Dzięki temu lepiej rozumiemy, jak teoria przekłada się na praktykę, a każdy krok w projekcie przybliża nas do profesjonalnego świata IT.</p>            </div>
+                <p>To nie tylko nauka programowania, ale też praca z jasno określonym celem – stworzeniem aplikacji użytecznej dla pracowników oraz stworzeniu godnej ośrodka wizytówki. Dzięki temu lepiej rozumiemy, jak teoria przekłada się na praktykę, a każdy krok w projekcie przybliża nas do profesjonalnego świata IT.</p>            </div>
             <div id="text3" class="popup hidden">
                 <h2>Praktyczne zastosowania Raspberry Pi – Mapowanie otoczenia z LiDAR</h2>
                 <p>W ramach naszego koła naukowego rozwijamy projekt, który polega na wykorzystaniu Raspberry Pi oraz czujnika LiDAR do mapowania otoczenia. Projekt ten ma na celu stworzenie systemu, który w czasie rzeczywistym będzie generował mapy przestrzeni, bazując na danych z czujnika.</p>
                   
                 <p>Raspberry Pi jest idealnym narzędziem do tego zadania dzięki swojej wszechstronności i możliwości łatwej integracji z różnymi sensorami. LiDAR pozwala na precyzyjne pomiary odległości, tworząc trójwymiarowy obraz otoczenia, co umożliwia generowanie dokładnych map w czasie rzeczywistym. Wykorzystujemy język Python oraz narzędzia do wizualizacji danych, które pozwalają nam monitorować i analizować dane bez opóźnień.</p>
                 
-                <div class="photo-container"></div>
+                <div class="photo-container">
                     <img class="photo" src="../images/open-days/kmn1.jpg" alt="Image 1">
                     <img class="photo" src="../images/open-days/kmn2.jpg" alt="Image 2">
                 </div>
@@ -273,7 +274,7 @@
                     <p>Drugi projekt to nasza wersja ChatGPT, ale z twistem – jest zoptymalizowana do rozmów głosowych. Używamy tu algorytmów TTS (Text-to-Speech), które zamieniają tekst na mowę, oraz STT (Speech-to-Text), które robią odwrotnie – rozpoznają mowę i zamieniają ją na tekst. Dzięki temu można prowadzić rozmowy z AI, jakby to była prawdziwa osoba.</p>
                   
                     <h3>Obydwa te projekty możecie zobaczyć na żywo na stanowisku!</h3>
-                  
+            </div> 
         </div>
     </div>
 
