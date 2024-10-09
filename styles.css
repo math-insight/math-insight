@@ -1,217 +1,257 @@
 body {
-    background-color: #FAF9F6;
-    padding: 0 3vw;
+  background-color: #faf9f6;
+  padding: 0 3vw;
 }
 
 .statute-wrapper {
-    margin-bottom: 20vh;
+  margin-bottom: 20vh;
 }
 
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 2px solid black;
-    overflow: hidden;
-    transition: max-height 0.3s;
-    margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  margin-bottom: 5vh;
 }
 
 .slide:first-of-type {
-    height: 90vh;
+  height: 90vh;
 }
 
 h1 {
-    font-family: "Oswald", sans-serif;
-    font-size: 3.8rem;
-    letter-spacing: 0.8px;
-    margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.8rem;
+  letter-spacing: 0.8px;
+  margin: 0;
 }
 
 h2 {
-    font-family: "Oswald", sans-serif;
-    font-size: 2.3rem;
-    letter-spacing: 0.8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.3rem;
+  letter-spacing: 0.8px;
 }
 
-p, li {
-    font-family: "Roboto mono", monospace;
-    font-size: 1.3rem;
-    line-height: 1.5;
+p,
+li {
+  font-family: "Roboto mono", monospace;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
 
-p.content-text, .project-description {
-    text-align: justify;
-    overflow: hidden;
+p.content-text,
+.project-description {
+  text-align: justify;
+  overflow: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    transition-duration: 0.2s;
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.2s;
 }
 
 a:hover {
-    color: palevioletred;
+  color: palevioletred;
 }
 
-.about-us, .projects {
-    padding: 10vh 0;
+.about-us,
+.projects {
+  padding: 10vh 0;
 }
 
 .projects {
-    width: 100%;
+  width: 100%;
 }
 
 .project-description {
-    background-color: #EAE9E6;
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 0;
-    margin-bottom: 18px;
-    border: 2px solid black;
+  background-color: #eae9e6;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .see-more-button {
-    border: none;
-    background-color: transparent;
-    font-family: "Roboto mono", monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 1px;
+  border: none;
+  background-color: transparent;
+  font-family: "Roboto mono", monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2px;
 }
 
 .hover-line {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .hover-line::after {
-    content: ''; 
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    background-color: black;
-    bottom: -5.5px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+  bottom: -5.5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
 .hover-line:hover::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .statute {
-    width: 100%;
-    margin-bottom: 5vh;
+  width: 100%;
+  margin-bottom: 5vh;
 }
 
 .wrap {
-    height: 50vh;
-    padding: 10vh 0;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
-
+  height: 50vh;
+  padding: 10vh 0;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
 }
 
 .contact-list {
-    --min: 10ch;
-    --gap: 1rem;
-  
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
+  --min: 10ch;
+  --gap: 1rem;
 
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  list-style-type: none;
 }
-  
+
 .contact-list > * {
-    flex: 1 1 var(--min);
+  flex: 1 1 var(--min);
 }
 
 .contact-list li {
-    width: max-content;
-    height: 100%;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 9vh;
+  width: 9vh;
+}
+
+.main-page-link {
+  max-width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 15px 0;
+}
+
+.main-page-link p {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 1px;
+}
+
+header.project-header,
+header.statute-header {
+  border-bottom: 2px solid black;
+  padding: 60px 0 35px;
+}
+
+section.project-content {
+  border-bottom: 2px solid black;
+  padding: 20px 0 60px;
+}
+
+section.statute-content {
+  padding-top: 20px;
+}
+
+@media (orientation: landscape) {
+  body {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .wrap {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  p,
+  li {
+    font-size: 0.95rem;
+  }
+
+  p.content-text,
+  .project-description,
+  a,
+  section.project-content {
+    text-align: center;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .see-more-button,
+  .main-page-link p {
+    font-size: 0.9rem;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact-list li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-img {
-    height: 9vh;
-    width: 9vh;
-}
-
-
-@media (orientation: landscape) {
-    body {
-      max-width: 70vw;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    width: 100%;
+    height: auto;
   }
 
-@media only screen and (orientation: portrait) {
-    .wrap {
-        display: flex;
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    p, li {
-        font-size: 0.95rem;
-    }
-
-    p.content-text, .project-description, a {
-        text-align: center;
-    }
-
-    .button-container {
-        justify-content: center;
-    }
-
-    .see-more-button {
-        font-size: 0.9rem;
-    }
-
-    .contact-list {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-
-    .contact-list li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-    }
+  .main-page-link {
+    margin: auto;
+    padding-top: 20px;
+  }
 }
