@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projects_summary</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,11 +13,10 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             height: 100vh;
             width: 100vw;
-            display: flex;
-            flex-direction: column;
+            overflow: hidden;
         }
 
         .container {
@@ -44,25 +44,25 @@
         .block:nth-child(1) {
             border-right: 2px solid black;
             border-bottom: 2px solid black;
-            background-image: url('./images/smelter_bg.jpg');
+            background-image: url('../images/open-days/smelter_bg.jpg');
         }
 
         .block:nth-child(2) {
             border-left: 2px solid black;
             border-bottom: 2px solid black;
-            background: url('./images/webapps_bg.png');
+            background: url('../images/open-days/webapps_bg.png');
         }
 
         .block:nth-child(3) {
             border-top: 2px solid black;
             border-right: 2px solid black;
-            background: url('./images/raspberry_bg.jpg');
+            background: url('../images/open-days/raspberry_bg.jpg');
         }
 
         .block:nth-child(4) {
             border-top: 2px solid black;
             border-left: 2px solid black;
-            background: url('./images/mlai_bg.png');
+            background: url('../images/open-days/mlai_bg.png');
         }
 
         .block p {
@@ -104,22 +104,68 @@
             width: 100vw;
             height: 100vh;
             background: rgba(0, 0, 0, 0.8);
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
         }
 
         .scrollable-text {
-            width: 60%;
+            max-width: 60%; /* Use max-width to ensure it doesn't overflow */
+            width: 100%; /* Ensure it scales properly */
             max-height: 80%;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             color: black;
             padding: 20px;
             overflow-y: auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            animation: fadeIn 0.5s;
+        }
+
+
+        .popup {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .popup h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .popup p {
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .qr {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .solo-photo {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 5vh auto;
+        }
+
+        .photo {
+            max-width: 45%;
+            height: auto;
+        }
+
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 100%;
+            margin: 5vh 0
         }
 
         @keyframes fadeIn {
@@ -164,22 +210,71 @@
 
     <div class="overlay" id="overlay" onclick="hideText()">
         <div class="scrollable-text" id="scrollable-text">
-            <div id="text1" class="hidden">
-                <h2>Projekt badawczy "Poziom wody w Odrze"</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, neque ac convallis luctus, orci nisi suscipit velit, in convallis massa arcu et nisi.</p>
+            <div id="text1" class="popup hidden">
+                <h2>Estymacja poziomu wody w Odrze - współpraca z KGHM Centrum Analiz </h2>
+                <p>W ramach naszego koła naukowego mieliśmy niesamowitą okazję współpracować z KGHM Centrum Analiz nad realnym problemem - estymowaniem poziomu wody w Odrze, w okolicach huty miedzi w Głogowie. Projekt wymagał od nas połączenia wiedzy z zakresu nauk ścisłych i programowania, ale przede wszystkim pracy zespołowej.</p>
+                  
+                <h3>🔍 Co robiliśmy?</h3>
+                <p>Po spotkaniu wprowadzającym z analitykami z KGHM CA, zaczęliśmy szukać danych, które mogłyby nam pomóc stworzyć model przewidujący poziom wody. Korzystaliśmy z języka Python oraz popularnych bibliotek związanych z machine learningiem (ML), takich jak scikit-learn czy pandas.</p>
+                
+                <div class="photo-container">
+                    <img class="photo" src="../images/open-days/kghm1.jpg" alt="Image 1">
+                    <img class="photo" src="../images/open-days/kghm2.jpg" alt="Image 2">
+                </div>
+
+                <h3>🤝 Dlaczego to było super?</h3>
+                <p>Dzięki temu projektowi nie tylko nauczyliśmy się, jak pracować z realnymi danymi, ale także jak współpracować z profesjonalną firmą. Zdobyliśmy doświadczenie w praktycznym zastosowaniu narzędzi, które poznajemy na zajęciach, a także rozwinęliśmy umiejętności pracy zespołowej i komunikacji.</p>
+                  
+                <img class="solo-photo" src="../images/open-days/kghm3.jpg">
+
+                <h3>🌍 Finał projektu - Kongres w Gdańsku</h3>
+                <p>Wisienką na torcie był 3-dniowy wyjazd do Gdańska, sfinansowany przez Uniwersytet Zielonogórski, gdzie na IV Kongresie Młodej Nauki mieliśmy szansę zaprezentować nasze rozwiązanie przed szeroką publicznością. To było nie tylko świetne doświadczenie, ale również okazja do nawiązania nowych kontaktów i poznania innych pasjonatów nauki!</p>
+            
+                <div class="photo-container">
+                    <img class="photo" src="../images/open-days/kmn1.jpg" alt="Image 1">
+                    <img class="photo" src="../images/open-days/kmn2.jpg" alt="Image 2">
+                </div>
+
+                <h3>Przeczytaj więcej o projekcie, skanując kod</h3>
+                <img class="qr" src="../images/qr/qr_code_transparent_bg.png">
             </div>
-            <div id="text2" class="hidden">
-                <h2>Tworzenie aplikacji webowych</h2>
-                <p>Nam vehicula, leo a accumsan gravida, metus nisi volutpat nisi, ac convallis enim mi non lectus.</p>
+            <div id="text2" class="popup hidden">
+                <h2>Zairymon – Aplikacja webowa monitorująca zanieczyszczenia powietrza w Żarach</h2>
+                <p>Zairymon to nasz ambitny projekt, który stworzyliśmy w ramach koła naukowego. Jest to aplikacja webowa napisana w TypeScript i JavaScript, która w czasie rzeczywistym pokazuje dane z czujników jakości powietrza oraz wyniki symulacji rozkładu zanieczyszczeń nad miastem Żary.</p>
+
+                <h3>Technologie i narzędzia</h3> 
+                <p>Podczas tworzenia aplikacji korzystaliśmy z nowoczesnych rozwiązań, które pozwalają na szybki rozwój i łatwe zarządzanie infrastrukturą. Backend został stworzony z użyciem Node.js i Express, i służy do obsługi zapytań oraz pracy z bazą danych Postgres, gdzie przechowujemy wyniki pomiarów i symulacji matematycznych. Na frontendzie wykorzystaliśmy Reacta z TypeScript, co umożliwiło stworzenie responsywnego i dynamicznego interfejsu użytkownika. Wszystko to działa w środowisku kontenerów Docker.</p>
+                    
+                <img class="qr" src="../images/qr/qr_code_zairymon_transparent.png">
+
+                <h2>Strona internetowa z panelem administratora dla Ośrodka Zastosowań Matematyki i Informatyki</h2>
+                <p>Nasza aplikacja to inicjatywa studentów Koła Naukowego, mająca na celu rozwój umiejętności programistycznych w realnych projektach. Aplikacja powstaje z myślą o pracownikach Ośrodka, a jej rozwój to dla nas cenne doświadczenie.</p>
+                <p>To nie tylko nauka programowania, ale też praca z jasno określonym celem – stworzeniem aplikacji użytecznej dla pracowników oraz stworzeniu godnej ośrodka wizytówki. Dzięki temu lepiej rozumiemy, jak teoria przekłada się na praktykę, a każdy krok w projekcie przybliża nas do profesjonalnego świata IT.</p>            </div>
+            <div id="text3" class="popup hidden">
+                <h2>Praktyczne zastosowania Raspberry Pi – Mapowanie otoczenia z LiDAR</h2>
+                <p>W ramach naszego koła naukowego rozwijamy projekt, który polega na wykorzystaniu Raspberry Pi oraz czujnika LiDAR do mapowania otoczenia. Projekt ten ma na celu stworzenie systemu, który w czasie rzeczywistym będzie generował mapy przestrzeni, bazując na danych z czujnika.</p>
+                  
+                <p>Raspberry Pi jest idealnym narzędziem do tego zadania dzięki swojej wszechstronności i możliwości łatwej integracji z różnymi sensorami. LiDAR pozwala na precyzyjne pomiary odległości, tworząc trójwymiarowy obraz otoczenia, co umożliwia generowanie dokładnych map w czasie rzeczywistym. Wykorzystujemy język Python oraz narzędzia do wizualizacji danych, które pozwalają nam monitorować i analizować dane bez opóźnień.</p>
+                
+                <div class="photo-container">
+                    <img class="photo" src="../images/open-days/kmn1.jpg" alt="Image 1">
+                    <img class="photo" src="../images/open-days/kmn2.jpg" alt="Image 2">
+                </div>
+                
+                <h3>Projekt możecie zobaczyć i przetestować na żywo na stanowisku!</h3>         
             </div>
-            <div id="text3" class="hidden">
-                <h2>Praktyczne zastosowania z Raspberry Pi</h2>
-                <p>Praesent at gravida eros. Suspendisse potenti. Phasellus eu odio vitae ligula bibendum cursus.</p>
-            </div>
-            <div id="text4" class="hidden">
-                <h2>Uczenie maszynowe i sztuczna inteligencja</h2>
-                <p>Cras sollicitudin, nisl at luctus dignissim, metus erat sagittis urna, vel bibendum nunc lorem non massa.</p>
-            </div>
+            <div id="text4" class="popup hidden">
+                    <h2>AI i Machine Learning – Technologie, które rozpalają wyobraźnię</h2>
+                    <p>Tematy związane z AI i uczeniem maszynowym (ML) są u nas przerabiane głównie pod koniec studiów, ale już teraz na całym świecie budzą ogromne zainteresowanie. I choć wszyscy mówią o ChatGPT, to sztuczna inteligencja to dużo więcej niż tylko wielkie modele językowe (LLM). W rzeczywistości AI jest używana w wielu różnych dziedzinach, od rozpoznawania obrazów po autonomiczne pojazdy.</p>
+                  
+                    <h3>FaceRecognition – Twarze rozpoznawane w czasie rzeczywistym</h3>
+                    <p>W jednym z naszych projektów bawimy się w rozpoznawanie twarzy w czasie rzeczywistym. Korzystamy z sieci neuronowych, takich jak Convolutional Neural Networks (CNN), które są świetne do rozpoznawania obiektów na obrazach. Te algorytmy są w stanie w locie rozpoznać twarze i śledzić je w ruchu.</p>
+                  
+                    <h3>Kopia ChatGPT z obsługą mowy wykorzystująca LiveKit</h3>
+                    <p>Drugi projekt to nasza wersja ChatGPT, ale z twistem – jest zoptymalizowana do rozmów głosowych. Używamy tu algorytmów TTS (Text-to-Speech), które zamieniają tekst na mowę, oraz STT (Speech-to-Text), które robią odwrotnie – rozpoznają mowę i zamieniają ją na tekst. Dzięki temu można prowadzić rozmowy z AI, jakby to była prawdziwa osoba.</p>
+                  
+                    <h3>Obydwa te projekty możecie zobaczyć na żywo na stanowisku!</h3>
+            </div> 
         </div>
     </div>
 
