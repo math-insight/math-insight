@@ -1,64 +1,102 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Koło Naukowe Matematyki Stosowanej Insight.</title>
     <meta
-        name="description"
-        content="Koło Naukowe Matematyki Stosowanej Insight. na Uniwersytecie Zielonogórskim działa w dziedzinach matematyki, statystyki, analizy danych oraz programowania."
+      name="description"
+      content="Koło Naukowe Matematyki Stosowanej Insight. na Uniwersytecie Zielonogórskim działa w dziedzinach matematyki, statystyki, analizy danych oraz programowania."
     />
 
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="icon" href="images/favicon.png" type="image/png" />
-
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icons/icon.png" type="image/png" />
+  </head>
+  <body>
     <div class="slide">
-        <h1 id="title"></h1>
+      <h1 id="title"></h1>
     </div>
     <div class="slide">
-        <div class="about-us">
-            <h1>O nas.</h1>
-            <p class="content-text">Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się na różnych kierunkach na Wydziale Matematyki, Informatyki i Ekonometrii. W 2023 roku braliśmy udział w Szkole Modelowania Matematycznego. To doświadczenie spowodowało, że postanowiliśmy rozwijać się w obszarach matematyki, statystyki, analizy danych i programowania, a co za tym idzie - rozszerzać naszą wiedzę teoretyczną i praktyczną w tych dziedzinach. Wspólnie wznowiliśmy działalność Koła Naukowego Matematyki Stosowanej, którego opiekunami są profesor Jacek Bojarski oraz doktor Maciej Niedziela. W ramach koła chcemy dzielić się zdobytym przez nas doświadczeniem, wspólnie analizować problemy z zakresu matematyki oraz tworzyć innowacyjne rozwiązania, które mogłyby usprawnić działanie wielu firm i projektów. Pragniemy inspirować innych do odkrywania piękna i wszechstronności matematyki oraz pokazywać, jak wartościowa jest analiza danych w dzisiejszym świecie. Przez naszą pracę chcemy przyczynić się do dalszego rozwoju naukowego oraz spowodować, aby matematyka częściej była wdrażana w działania praktyczne.</p>
-        </div>
+      <div class="about-us">
+        <h1>O nas.</h1>
+        <p class="content-text">
+          Jesteśmy grupą studentów z Uniwersytetu Zielonogórskiego uczących się
+          na różnych kierunkach na Wydziale Matematyki, Informatyki i
+          Ekonometrii. W 2023 roku braliśmy udział w Szkole Modelowania
+          Matematycznego. To doświadczenie spowodowało, że postanowiliśmy
+          rozwijać się w obszarach matematyki, statystyki, analizy danych i
+          programowania, a co za tym idzie - rozszerzać naszą wiedzę teoretyczną
+          i praktyczną w tych dziedzinach. Wspólnie wznowiliśmy działalność Koła
+          Naukowego Matematyki Stosowanej, którego opiekunami są profesor Jacek
+          Bojarski oraz doktor Maciej Niedziela. W ramach koła chcemy dzielić
+          się zdobytym przez nas doświadczeniem, wspólnie analizować problemy z
+          zakresu matematyki oraz tworzyć innowacyjne rozwiązania, które mogłyby
+          usprawnić działanie wielu firm i projektów. Pragniemy inspirować
+          innych do odkrywania piękna i wszechstronności matematyki oraz
+          pokazywać, jak wartościowa jest analiza danych w dzisiejszym świecie.
+          Przez naszą pracę chcemy przyczynić się do dalszego rozwoju naukowego
+          oraz spowodować, aby matematyka częściej była wdrażana w działania
+          praktyczne.
+        </p>
+      </div>
     </div>
     <div class="slide">
-        <div class="projects">
-            <h1>Projekty.</h1>
-            <div id="all-projects">
-
-            </div>
+      <div class="projects" id="projects">
+        <h1>Projekty.</h1>
+        <div id="all-projects">
+          <!-- Ładowanie projektów z pliku project.js -->
         </div>
+      </div>
     </div>
     <div class="slide">
-        <div class="statute">
-            <a href="statute.html"><p>Statut Koła Naukowego Matematyki Stosowanej Insight.</p></a>
-        </div>
+      <div class="statute" id="statute">
+        <a href="statute.html"
+          ><p>Statut Koła Naukowego Matematyki Stosowanej Insight.</p></a
+        >
+      </div>
     </div>
     <div class="wrap">
-        <h1>Kontakt.</h1>
-        <ul class="contact-list">
-            <li>
-                <img loading="lazy" src="./images/icons/email_icon.png" alt="Adres email">
-                <p>knmatematykistosowanej@gmail.com</p>
-            </li>
-            <li>
-                <img loading="lazy" src="./images/icons/github_icon.png" alt="Nazwa organizacji na Github">
-                <a href="https://github.com/math-insight"><p>math-insight</p></a>
-            </li>
-            <li>
-                <img loading="lazy" src="./images/icons/location_icon.png" alt="Adres email">
-                <a href="https://www.google.com/maps/place/A-29+Campus+A/@51.9417947,15.5279852,18z/data=!4m10!1m2!2m1!1sul.+prof.+Z.+Szafrana+4a,65-516+Zielona+G%C3%B3ra!3m6!1s0x4706131914ce0075:0x55179ebc1c6e9daa!8m2!3d51.9423378!4d15.5301146!15sCi11bC4gcHJvZi4gWi4gU3phZnJhbmEgNGEsNjUtNTE2IFppZWxvbmEgR8OzcmGSAQp1bml2ZXJzaXR54AEA!16s%2Fg%2F11kc281b1p?entry=ttu" target="_blank" rel="noopener noreferrer">
-                    <p>ul. prof. Z. Szafrana 4a,65-516 Zielona Góra</p>
-                </a>
-            </li>
-          </ul>
+      <h1>Kontakt.</h1>
+      <ul class="contact-list">
+        <li>
+          <img
+            loading="lazy"
+            src="./images/icons/email_icon.png"
+            alt="Adres email"
+          />
+          <p>knmatematykistosowanej@gmail.com</p>
+        </li>
+        <li>
+          <img
+            loading="lazy"
+            src="./images/icons/github_icon.png"
+            alt="Nazwa organizacji na Github"
+          />
+          <a href="https://github.com/math-insight"><p>math-insight</p></a>
+        </li>
+        <li>
+          <img
+            loading="lazy"
+            src="./images/icons/location_icon.png"
+            alt="Adres email"
+          />
+          <a
+            href="https://www.google.com/maps/place/A-29+Campus+A/@51.9417947,15.5279852,18z/data=!4m10!1m2!2m1!1sul.+prof.+Z.+Szafrana+4a,65-516+Zielona+G%C3%B3ra!3m6!1s0x4706131914ce0075:0x55179ebc1c6e9daa!8m2!3d51.9423378!4d15.5301146!15sCi11bC4gcHJvZi4gWi4gU3phZnJhbmEgNGEsNjUtNTE2IFppZWxvbmEgR8OzcmGSAQp1bml2ZXJzaXR54AEA!16s%2Fg%2F11kc281b1p?entry=ttu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>ul. prof. Z. Szafrana 4a,65-516 Zielona Góra</p>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <script src="script.js"></script>
     <script src="projects.js"></script>
-</body>
+  </body>
 </html>
