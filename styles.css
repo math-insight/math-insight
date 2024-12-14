@@ -180,6 +180,26 @@ section.project-content {
   padding: 20px 0 60px;
 }
 
+section.project-content h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+}
+
+section.project-content .photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 100%;
+  margin: 5vh 0
+}
+
+section.project-content .photo-container img {
+  height: 275px;
+  width: auto;
+}
+
 section.statute-content {
   padding-top: 20px;
 }
@@ -209,6 +229,10 @@ section.statute-content {
   h2 {
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  section.project-content h3 {
+    font-size: 1.5rem;
   }
 
   p,
@@ -253,5 +277,9 @@ section.statute-content {
   .main-page-link {
     margin: auto;
     padding-top: 20px;
+  }
+
+  section.project-content .photo-container img {
+    height: 175px;
   }
 }
