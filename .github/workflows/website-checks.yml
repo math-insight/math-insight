@@ -1,0 +1,49 @@
+name: "Website checks"
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  javascript:
+    name: "JavaScript and project pages"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: "Check out repository"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: "Check JavaScript syntax"
+        run: |
+          node --check script.js
+          node --check projects.js
+      - name: "Check project page paths"
+        shell: bash
+        run: |
+          node << "NODE"
+          const fs = require("node:fs");
+          const vm = require("node:vm");
+          const projects = vm.runInNewContext(
+            fs.readFileSync("projects.js", "utf8") + "\nprojects;",
+            Object.create(null),
+            { timeout: 1000 }
+          );
+          if (!Array.isArray(projects)) {
+            throw new Error("projects must be an array");
+          }
+          for (const project of projects) {
+            if (!project.path) continue;
+            const page = `more-about-projects/${project.path}.html`;
+            if (!fs.existsSync(page) || !fs.statSync(page).isFile()) {
+              throw new Error(`Missing project page: ${page}`);
+            }
+          }
+          console.log("All project page paths exist.");
+          NODE
+
